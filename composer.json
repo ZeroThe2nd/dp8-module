@@ -1,0 +1,17 @@
+{
+    "name": "pepijnzegveld/dp8-module",
+    "description": "Drupal 8 module for testing",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Pepijn Zegveld",
+            "email": "pepijn@ezcompany.nl"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-0": {
+            "pepijnzegveld": "src/"
+        }
+    }
+}
