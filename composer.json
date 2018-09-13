@@ -1,7 +1,7 @@
 {
     "name"         : "pepijnzegveld/dp8-module",
     "license"      : "proprietary",
-    "version"      : "0.1.1",
+    "version"      : "0.1.2",
     "description"  : "Drupal 8 module for testing",
     "type"         : "library",
     "authors"      : [
@@ -11,14 +11,14 @@
         }
     ],
     "require"      : {
-        "pepijnzegveld/dp8-service-test" : "0.1.0"
+        "pepijnzegveld/dp8-test-services" : "^0.1"
     },
     "repositories" : [
         {
             "type"    : "package",
             "package" : {
-                "name"    : "pepijnzegveld/dp8-service-test",
-                "version" : "^0.1",
+                "name"    : "pepijnzegveld/dp8-test-services",
+                "version" : "0.1.1",
                 "type"    : "package",
                 "source"  : {
                     "url"       : "https://github.com/ZeroThe2nd/dp8-service.git",
