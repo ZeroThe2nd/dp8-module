@@ -1,26 +1,30 @@
 {
-    "name"         : "pepijnzegveld/dp8-module",
-    "license"      : "proprietary",
-    "description"  : "Drupal 8 module for testing",
-    "type"         : "library",
-    "authors"      : [
+    "name"              : "pepijnzegveld/dp8-module",
+    "license"           : "proprietary",
+    "description"       : "Drupal 8 module for testing",
+    "authors"           : [
         {
             "name"  : "Pepijn Zegveld",
             "email" : "pepijn@ezcompany.nl"
         }
     ],
-    "require"      : {
-        "pepijnzegveld/dp8-test-services": "*"
+    "require"           : {
+        "pepijnzegveld/dp8-test-services" : "*"
     },
-    "repositories" : [
+    "repositories"      : [
         {
-            "type": "vcs",
-            "url": "https://github.com/ZeroThe2nd/dp8-test-services"
+            "type" : "vcs",
+            "url"  : "https://github.com/ZeroThe2nd/dp8-test-services"
         }
     ],
-    "autoload"     : {
+    "minimum-stability" : "dev",
+    "prefer-stable"     : true,
+    "autoload"          : {
+        "psr-4" : {
+            "pepijnzegveld\\" : "src/"
+        },
         "psr-0" : {
-            "pepijnzegveld" : "src/"
+            "pepijnzegveld\\" : "src/"
         }
     }
 }
