@@ -19,14 +19,5 @@
         }
     ],
     "minimum-stability" : "dev",
-    "prefer-stable"     : true,
-    "autoload"          : {
-        "psr-4" : {
-            "pepijnzegveld\\" : "src/"
-        },
-        "psr-0" : {
-            "pepijnzegveld\\" : "src/"
-        }
-    }
+    "prefer-stable"     : true
 }
-
