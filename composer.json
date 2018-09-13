@@ -9,7 +9,7 @@
         }
     ],
     "require"           : {
-        "pepijnzegveld/dp8-test-services" : "*"
+        "pepijnzegveld/dp8-test-services" : "dev-master"
     },
     "repositories"      : [
         {
@@ -28,3 +28,4 @@
         }
     }
 }
+
