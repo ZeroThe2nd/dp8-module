@@ -10,21 +10,12 @@
         }
     ],
     "require"      : {
-        "pepijnzegveld/dp8-test-services" : "^0.1"
+        "pepijnzegveld/dp8-test-services" : "dev-master"
     },
     "repositories" : [
         {
-            "type"    : "package",
-            "package" : {
-                "name"    : "pepijnzegveld/dp8-test-services",
-                "version" : "0.1.1",
-                "type"    : "package",
-                "source"  : {
-                    "url"       : "https://github.com/ZeroThe2nd/dp8-service.git",
-                    "type"      : "git",
-                    "reference" : "master"
-                }
-            }
+            "type": "vcs",
+            "url": "https://github.com/ZeroThe2nd/dp8-test-services"
         }
     ],
     "autoload"     : {
