@@ -1,0 +1,4 @@
+generate token:
+  title: 'Generate Token'
+view kaomoji:
+  title: 'View Kaomoji block'

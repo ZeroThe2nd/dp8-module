@@ -1,0 +1,25 @@
+kaomoji-app:
+  version: 0.1.0
+  js:
+    js/App.js:
+      minified: false
+  dependencies:
+    - poc/vue
+
+css:
+  version: 0.2.0
+  css:
+    component:
+      css/fonts.css:
+        minified: false
+      css/material.css:
+        minified: false
+      css/main.css:
+        minified: false
+
+vue:
+  version: 2.5.17
+  js:
+    https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js:
+      type: external
+      minified: false

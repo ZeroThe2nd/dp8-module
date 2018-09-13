@@ -1,0 +1,271 @@
+/* CARDS */
+.card {
+  display: inline-block;
+  max-width: 675px;
+  min-width: 22vw;
+  border-radius: 2px;
+  margin: 4px;
+  z-index: 1;
+  flex: 1 0 350px;
+  -webkit-flex: 1 0 350px;
+  background: rgb(24, 32, 41);
+  color: #fff;
+}
+.card > .media {
+  margin: 0 0 20px;
+  display: block;
+  overflow: hidden;
+}
+.card > .media > * {
+  display: block;
+  width: 100%;
+  border: 0;
+}
+.card > .media.aspect16-9 {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.card > .media.aspect16-9 > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.card > .media.aspect1-1 {
+  position: relative;
+  padding-bottom: 100%; /* 1:1 */
+  height: 0;
+}
+.card > .media.aspect1-1 > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.card > .title:first-child {
+  margin: 24px 16px 16px
+}
+.card > .title {
+  margin: 16px 16px 16px
+}
+.card > .userdata {
+  margin: 16px;
+  height: 40px
+}
+.card > .body {
+  margin: 16px
+}
+.card > .body:last-child {
+  margin: 16px 16px 24px
+}
+.card-alert h1, .card-alert p, .card-alert span {
+  color: #f8f8f8
+}
+/* Text color inside the alert cards */
+.card.alert {
+  background-color: #4527a0;
+  margin: 0;
+  border-radius: 0
+}
+.card > .actions {
+  line-height: 8px;
+  margin-bottom: 0;
+  padding-bottom: 16px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.card > .actions > .material-button {
+  margin-bottom: 16px;
+}
+/* COLOR BINDS */
+.color-red {
+  background: rgba(183, 28, 28, 0.9) !important;
+}
+.color-green {
+  background: rgba(56, 142, 60, 0.9) !important;
+  color: #fff
+}
+.color-green-rad {
+  background: radial-gradient(rgba(34, 41, 34, 1), rgba(0, 5, 0, 1)) !important;
+}
+.color-blue {
+  background: rgba(2, 136, 209, 0.9) !important;
+}
+.color-purple {
+  background: rgba(74, 20, 140, 0.9) !important;
+}
+.color-orange {
+  background: rgba(239, 108, 0, 0.9) !important;
+}
+/* shadow levels config */
+.zlevel-2, .card, .card-textblock, .material-button.raised {
+  /* this is set as default for all cards */
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.zlevel-3 {
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+}
+.zlevel-4, #fab {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+.zlevel-6 {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+}
+.zlevel-8, .card-raised, .material-button:active {
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+}
+.zlevel-16 {
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+/* BUTTON */
+.material-button {
+  background: unset;
+  color: inherit;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  border: 0;
+  height: 36px;
+  line-height: 36px;
+  min-width: 76px;
+  margin: 2px 8px;
+  padding: 0 6px;
+  cursor: pointer;
+  cursor: hand;
+  user-select: none;
+  flex: 1 0 content;
+}
+button > *,
+.material-button > * {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0
+}
+.material-button.small {
+  min-width: 36px;
+}
+.material-button.round {
+  overflow: hidden;
+  height: 56px;
+  width: 56px;
+  min-width: unset;
+  min-height: unset;
+  border-radius: 100%;
+  cursor: pointer;
+  cursor: hand
+}
+.material-button.round .material-icons {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin: 12px 16px
+}
+.material-button .text-button {
+  display: block;
+  vertical-align: middle;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+}
+/* INPUT */
+/* markup for form elements */
+.material-input {
+  position: relative;
+  margin: 0 8px 24px 8px
+}
+.material-input input[type="color"], .material-input input[type="date"], .material-input input[type="datetime"], .material-input input[type="datetime-local"], .material-input input[type="email"], .material-input input[type="month"], .material-input input[type="number"], .material-input input[type="password"], .material-input input[type="search"], .material-input input[type="tel"], .material-input input[type="text"], .material-input input[type="time"], .material-input input[type="url"], .material-input input[type="week"], .material-input textarea {
+  background-color: transparent;
+  border-color: #d50000;
+  border-style: none none solid;
+  border-width: 0 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+.material-input input[type="color"]:focus, .material-input input[type="date"]:focus, .material-input input[type="datetime"]:focus, .material-input input[type="datetime-local"]:focus, .material-input input[type="email"]:focus, .material-input input[type="month"]:focus, .material-input input[type="number"]:focus, .material-input input[type="password"]:focus, .material-input input[type="search"]:focus, .material-input input[type="tel"]:focus, .material-input input[type="text"]:focus, .material-input input[type="time"]:focus, .material-input input[type="url"]:focus, .material-input input[type="week"]:focus, .material-input textarea:focus {
+  outline: 0;
+}
+.material-input input[type="color"]:focus ~ span, .material-input input[type="date"]:focus ~ span, .material-input input[type="datetime"]:focus ~ span, .material-input input[type="datetime-local"]:focus ~ span, .material-input input[type="email"]:focus ~ span, .material-input input[type="month"]:focus ~ span, .material-input input[type="number"]:focus ~ span, .material-input input[type="password"]:focus ~ span, .material-input input[type="search"]:focus ~ span, .material-input input[type="tel"]:focus ~ span, .material-input input[type="text"]:focus ~ span, .material-input input[type="time"]:focus ~ span, .material-input input[type="url"]:focus ~ span, .material-input input[type="week"]:focus ~ span, .material-input textarea:focus ~ span {
+  -webkit-transition: all 0.075s ease;
+  -moz-transition: all 0.075s ease;
+  transition: all 0.075s ease;
+  width: 100%;
+}
+.material-input input[type="color"]:focus ~ label, .material-input input[type="color"]:valid ~ label, .material-input input[type="date"]:focus ~ label, .material-input input[type="date"]:valid ~ label, .material-input input[type="datetime"]:focus ~ label, .material-input input[type="datetime"]:valid ~ label, .material-input input[type="datetime-local"]:focus ~ label, .material-input input[type="datetime-local"]:valid ~ label, .material-input input[type="email"]:focus ~ label, .material-input input[type="email"]:valid ~ label, .material-input input[type="month"]:focus ~ label, .material-input input[type="month"]:valid ~ label, .material-input input[type="number"]:focus ~ label, .material-input input[type="number"]:valid ~ label, .material-input input[type="password"]:focus ~ label, .material-input input[type="password"]:valid ~ label, .material-input input[type="search"]:focus ~ label, .material-input input[type="search"]:valid ~ label, .material-input input[type="tel"]:focus ~ label, .material-input input[type="tel"]:valid ~ label, .material-input input[type="text"]:focus ~ label, .material-input input[type="text"]:valid ~ label, .material-input input[type="time"]:focus ~ label, .material-input input[type="time"]:valid ~ label, .material-input input[type="url"]:focus ~ label, .material-input input[type="url"]:valid ~ label, .material-input input[type="week"]:focus ~ label, .material-input input[type="week"]:valid ~ label, .material-input textarea:focus ~ label, .material-input textarea:valid ~ label {
+  -webkit-transition: all 0.125s ease;
+  -moz-transition: all 0.125s ease;
+  transition: all 0.125s ease;
+  color: #d50000;
+  font-size: .75em;
+  top: -20px;
+}
+.material-input input[type="color"]:invalid, .material-input input[type="date"]:invalid, .material-input input[type="datetime"]:invalid, .material-input input[type="datetime-local"]:invalid, .material-input input[type="email"]:invalid, .material-input input[type="month"]:invalid, .material-input input[type="number"]:invalid, .material-input input[type="password"]:invalid, .material-input input[type="search"]:invalid, .material-input input[type="tel"]:invalid, .material-input input[type="text"]:invalid, .material-input input[type="time"]:invalid, .material-input input[type="url"]:invalid, .material-input input[type="week"]:invalid, .material-input textarea:invalid {
+  box-shadow: none;
+}
+.material-input input[type="color"] ~ span, .material-input input[type="date"] ~ span, .material-input input[type="datetime"] ~ span, .material-input input[type="datetime-local"] ~ span, .material-input input[type="email"] ~ span, .material-input input[type="month"] ~ span, .material-input input[type="number"] ~ span, .material-input input[type="password"] ~ span, .material-input input[type="search"] ~ span, .material-input input[type="tel"] ~ span, .material-input input[type="text"] ~ span, .material-input input[type="time"] ~ span, .material-input input[type="url"] ~ span, .material-input input[type="week"] ~ span, .material-input textarea ~ span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  -webkit-transition: all 0.125s ease;
+  -moz-transition: all 0.125s ease;
+  transition: all 0.125s ease;
+  background: #d50000;
+  display: block;
+}
+.material-input label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  color: #d50000;
+  pointer-events: none;
+}
+/* TAGS */
+.tag {
+  display: inline-block;
+  padding: 0 12px;
+  margin: 2px;
+  line-height: 24px;
+  min-height: 24px;
+  vertical-align: middle;
+  border-radius: 24px;
+  text-align: center;
+  background: #767676;
+  color: #fff;
+  word-wrap: break-word;
+  word-break: break-all;
+  letter-spacing: normal;
+}
+.tag:hover {
+  color: rgba(0, 0, 0, 0.87);
+  background: #e0e0e0;
+  cursor: pointer;
+  cursor: hand;
+}
+/* SCROLLBARd */
+::-webkit-scrollbar-track {
+  background-color: unset
+}
+::-webkit-scrollbar-thumb {
+  background-color: #212121;
+  border-radius: 2px
+}
+::-webkit-scrollbar {
+  background-color: rgb(33, 33, 33)
+}

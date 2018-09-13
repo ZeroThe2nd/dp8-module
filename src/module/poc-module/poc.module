@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for poc module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function poc_help($route_name, RouteMatchInterface $route_match)
+{
+    switch ($route_name) {
+        case 'help.page.poc':
+            return t('
+        <h2>Proof-of-concept module.</h2>
+        <p>This module\'s sole purpose is to test hos drupal handles composer dependencies.</p>
+        <p>It provides two components: A Kaomoji block, and a token generator page.</p>
+        <p>The Kaomoji block simply uses a separate service to return a random Kaomoji for you to put wherever you like.</p>
+        <p>The Token page allows you to set a length (and alphabet) and generate a token based on those parameters.</p>
+      ');
+    }
+
+    return null;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function poc_theme($existing, $type, $theme, $path)
+{
+    return [
+        'kaomoji' => [
+            'variables' => [
+                'kaomoji' => null,
+            ],
+            'template'  => 'kaomoji',
+        ],
+        'token'   => [
+            'variables' => [
+                'token' => null,
+            ],
+            'template'  => 'token',
+        ],
+    ];
+}

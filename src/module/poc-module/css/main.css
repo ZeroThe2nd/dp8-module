@@ -1,0 +1,9 @@
+.poc {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+#kaomoji {
+  display: block;
+  text-align: center;
+}

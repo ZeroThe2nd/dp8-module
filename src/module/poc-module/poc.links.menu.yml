@@ -1,0 +1,5 @@
+poc.form:
+  title: 'Token Generator settings'
+  description: 'Configure settings for the token generator page.'
+  route_name: poc.form
+  parent: 'system.admin_config_development'
