@@ -1,5 +1,6 @@
 {
     "name"              : "pepijnzegveld/dp8-module",
+    "type"              : "drupal-custom-module",
     "license"           : "proprietary",
     "description"       : "Drupal 8 module for testing",
     "authors"           : [
