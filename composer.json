@@ -1,7 +1,6 @@
 {
     "name"         : "pepijnzegveld/dp8-module",
     "license"      : "proprietary",
-    "version"      : "0.1.2",
     "description"  : "Drupal 8 module for testing",
     "type"         : "library",
     "authors"      : [
