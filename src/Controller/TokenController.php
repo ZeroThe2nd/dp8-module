@@ -1,6 +1,5 @@
 <?php namespace Drupal\poc\Controller;
 
-use Drupal\Core\Config\Config;
 use pepijnzegveld\Dp8TestServices\TokenService;
 
 /**
