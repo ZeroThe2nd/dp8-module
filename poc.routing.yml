@@ -1,28 +1,16 @@
-poc.generate:
-  path: 'poc/generate/{paragraphs}/{phrases}'
+poc.token:
+  path: 'token/{length}'
   defaults:
-    _controller: '\Drupal\poc\Controller\LoremIpsumController::generate'
+    _controller: '\Drupal\poc\Controller\TokenController::generate'
+    _title: 'Generate a token'
   requirements:
-    _permission: 'generate lorem ipsum'
+    _permission: 'generate token'
 
-poc.random:
-  path: 'poc/random'
-  defaults:
-    _controller: '\Drupal\poc\Controller\LoremIpsumController::rand'
-  requirements:
-    _permission: 'generate lorem ipsum'
-
-poc.yesno:
-  path: 'yesno'
-  defaults:
-    _controller: '\Drupal\poc\Controller\YesNoController::getYesNo'
-  requirements:
-    _permission: 'generate lorem ipsum'
-
-poc.form:
+# configuration form in settings
+poc.config:
   path: '/admin/config/development/poc'
   defaults:
-    _form: 'Drupal\poc\Form\LoremIpsumForm'
+    _form: 'Drupal\poc\Form\TokenConfigForm'
     _title: 'Lorem ipsum settings'
   requirements:
     _permission: 'administer site configuration'

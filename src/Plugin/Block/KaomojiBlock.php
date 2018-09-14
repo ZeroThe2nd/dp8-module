@@ -31,9 +31,27 @@ class KaomojiBlock extends BlockBase
      */
     public function build()
     {
+        $config = \Drupal::config('poc.settings');
+        $useApp = (bool)$config->get('poc.KaomojiApp');
+
+        if ($useApp) {
+            return [
+                '#theme'     => 'kaomoji-app',
+                '#libraries' => [
+                    'poc/css',
+                    'poc/vue',
+                    'poc/kaomoji-app',
+                ],
+            ];
+        }
+
+        // Use the static version
         return [
-            '#markup' => $this->t('Hello, World!'),
-            '#theme' => 'kaomoji'
+            '#kaomoji'   => $this->kaomojiService->getKaomoji(),
+            '#theme'     => 'kaomoji',
+            '#libraries' => [
+                'poc/css',
+            ],
         ];
     }
 

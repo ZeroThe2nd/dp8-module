@@ -1,29 +1,39 @@
 <?php namespace Drupal\poc\Controller;
 
-use Drupal\poc\Service\RestService;
+use Drupal\Core\Config\Config;
+use pepijnzegveld\Dp8TestServices\TokenService;
 
 /**
  * Class TokenController
  *
  * @package Drupal\poc\Controller
  */
-class TokenController {
+class TokenController
+{
 
-  private $restApi;
+    private $tokenService;
 
-  public function __construct() {
-    $this->restApi = new RestService();
-  }
+    public function __construct()
+    {
+        $this->tokenService = new TokenService;
+    }
 
-  public function getYesNo() {
-    return [
-      '#yesNo' => $this->restApi->getYesNo(),
-      '#theme' => 'yesno',
-      '#attached' => [
-        'library' => [
-          'poc/poc',
-        ],
-      ],
-    ];
-  }
+    public function generate($length = 64)
+    {
+        $config  = \Drupal::config('poc.settings');
+        $charset = $config->get('poc.TokenAlphabet');
+        if (!is_null($charset)) {
+            $this->tokenService->setTokenChars((string)$charset);
+        }
+
+        return [
+            '#token'    => $this->tokenService->generateToken($length),
+            '#theme'    => 'token',
+            '#attached' => [
+                'library' => [
+                    'poc/css',
+                ],
+            ],
+        ];
+    }
 }

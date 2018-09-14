@@ -1,6 +1,6 @@
-name: DP8 modulair test
-type: module
-description: Test module to install through composer with dependencies
-package: Custom
-core: 8.x
-configure: loremipsum.form
+name: 'DP8 module test'
+type: 'module'
+description: 'Test module to install through composer with dependencies'
+package: 'Custom'
+core: '8.x'
+configure: 'poc.config'
