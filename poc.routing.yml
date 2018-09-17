@@ -8,7 +8,7 @@ poc.token:
 
 # configuration form in settings
 poc.config:
-  path: '/admin/config/development/poc'
+  path: '/admin/config/poc'
   defaults:
     _form: 'Drupal\poc\Form\TokenConfigForm'
     _title: 'Lorem ipsum settings'
