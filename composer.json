@@ -10,12 +10,11 @@
         }
     ],
     "require"           : {
-        "composer/installers": "~1.0",
         "dvg/dp8-test-services" : "dev-master"
     },
     "require-dev"       : {
-        "symfony/translation": "3.4.*",
-        "drupal/core" : "^8.5.4"
+        "symfony/translation"            : "3.4.*",
+        "webflo/drupal-core-require-dev" : "^8.5.4"
     },
     "repositories"      : [
         {
@@ -24,5 +23,12 @@
         }
     ],
     "minimum-stability" : "dev",
-    "prefer-stable"     : true
+    "prefer-stable"     : true,
+    "extra"             : {
+        "drupal-scaffold" : {
+            "initial" : {
+                ".editorconfig" : "../.editorconfig"
+            }
+        }
+    }
 }
