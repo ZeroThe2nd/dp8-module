@@ -10,6 +10,7 @@
         }
     ],
     "require"           : {
+        "composer/installers": "~1.0",
         "pepijnzegveld/dp8-test-services" : "dev-master"
     },
     "require-dev"       : {
