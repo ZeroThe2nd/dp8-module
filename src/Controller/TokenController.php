@@ -29,8 +29,13 @@ class TokenController {
     $tokenCharset = (string) $config->get('poc.TokenCharset');
     $tokenLength = (int) $config->get('poc.TokenLength');
 
-    if (is_null($length) && empty($tokenLength)) {
-      $tokenCharset = 64;
+    if (!empty($length)) {
+      // Length input from URL, Override config
+      $tokenLength = (int) $length;
+    }
+    elseif (is_null($length) && empty($tokenLength)) {
+      // Config empty, set default
+      $tokenLength = 64;
     }
 
     if (!is_null($tokenCharset)) {
