@@ -31,7 +31,29 @@ class KaomojiBlock extends BlockBase {
   public function build() {
     $config = \Drupal::config('poc.settings');
     $useApp = (bool) $config->get('poc.UseKaomojiApp');
-    $render = [
+
+    if ($useApp) {
+      // Use the app
+      return [
+        '#theme' => 'kaomoji-app',
+        '#cache' => [
+          'max-age' => 0,
+        ],
+        '#libraries' => [
+          'poc/style',
+        ],
+        '#attached' => [
+          'library' => [
+            'poc/kaomoji-app',
+          ],
+        ],
+      ];
+    }
+
+    // Use the static version
+    return [
+      '#theme' => 'kaomoji',
+      '#kaomoji' => $this->kaomojiService->getKaomoji(),
       '#cache' => [
         'max-age' => 0,
       ],
@@ -39,23 +61,6 @@ class KaomojiBlock extends BlockBase {
         'poc/style',
       ],
     ];
-
-    if ($useApp) {
-      return array_merge($render, [
-        '#theme' => 'kaomoji-app',
-        '#attached' => [
-          'library' => [
-            'poc/kaomoji-app',
-          ],
-        ],
-      ]);
-    }
-
-    // Use the static version
-    return array_merge($render, [
-      '#kaomoji' => $this->kaomojiService->getKaomoji(),
-      '#theme' => 'kaomoji',
-    ]);
   }
 
   /**
