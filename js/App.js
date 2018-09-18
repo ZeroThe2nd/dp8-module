@@ -72,14 +72,14 @@ document.addEventListener('DOMContentLoaded', () => {
     el: '#kaomojiApp',
     template: '<div class="card kaomojiCard" @click="newKaomoji">'
       + '<div class="body">'
-      + '<div class="kaomoji">{{ kaomoji }}</div>'
+        + '<div class="kaomoji">{{ kaomoji }}</div>'
       + '</div><div class="actions">'
-      + '<button class="material-button small">Click for a new Kaomoji</button>'
+        + '<button class="material-button small">Click for a new Kaomoji</button>'
       + '</div></div>',
     data: () => ({
       kaomoji: 'LOADING'
     }),
-    created: function () {
+    created() {
       this.newKaomoji()
     },
     methods: {
