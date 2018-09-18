@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
       + '<div class="body">'
         + '<div class="kaomoji">{{ kaomoji }}</div>'
       + '</div><div class="actions">'
-        + '<button class="material-button small">Click for a new Kaomoji</button>'
+        + '<button class="material-button small .text-button">Click for a new Kaomoji</button>'
       + '</div></div>',
     data: () => ({
       kaomoji: 'LOADING'
