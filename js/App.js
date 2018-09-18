@@ -70,7 +70,7 @@ class coreFunctions {
 document.addEventListener('DOMContentLoaded', () => {
   const KaomojiApp = new Vue({
     el: '#kaomojiApp',
-    template: '<div class="card" @click="newKaomoji">'
+    template: '<div class="card kaomojiCard" @click="newKaomoji">'
       + '<div class="body">'
       + '<div class="kaomoji" id="kaomoji">{{ kaomoji }}</div>'
       + '<p><small>Click for a new Kaomoji</small></p>'
