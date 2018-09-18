@@ -1,33 +1,33 @@
 {
-    "name"              : "dvg/dp8-module",
-    "type"              : "drupal-custom-module",
-    "license"           : "proprietary",
-    "description"       : "Drupal 8 module for testing",
-    "authors"           : [
+    "name": "dvg/dp8-module",
+    "type": "drupal-custom-module",
+    "license": "proprietary",
+    "description": "Drupal 8 module for testing",
+    "authors": [
         {
-            "name"  : "Pepijn Zegveld",
-            "email" : "pepijn@ezcompany.nl"
+            "name": "Pepijn Zegveld",
+            "email": "pepijn@ezcompany.nl"
         }
     ],
-    "require"           : {
-        "dvg/dp8-test-services" : "dev-master"
+    "require": {
+        "dvg/dp8-test-services": "dev-master"
     },
-    "require-dev"       : {
-        "symfony/translation"            : "3.4.*",
-        "webflo/drupal-core-require-dev" : "^8.5.4"
+    "require-dev": {
+        "symfony/translation": "3.4.*",
+        "webflo/drupal-core-require-dev": "^8.5.4"
     },
-    "repositories"      : [
+    "repositories": [
         {
-            "type" : "vcs",
-            "url"  : "https://github.com/ZeroThe2nd/dp8-test-services"
+            "type": "vcs",
+            "url": "https://github.com/ZeroThe2nd/dp8-test-services"
         }
     ],
-    "minimum-stability" : "dev",
-    "prefer-stable"     : true,
-    "extra"             : {
-        "drupal-scaffold" : {
-            "initial" : {
-                ".editorconfig" : "../.editorconfig"
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "drupal-scaffold": {
+            "initial": {
+                ".editorconfig": "../.editorconfig"
             }
         }
     }

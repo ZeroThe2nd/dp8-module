@@ -1,13 +1,13 @@
 'use strict'
 
 class coreFunctions {
-  static getKaomoji () {
+  static getKaomoji() {
     const Kaomojis = '\\(^\u0414^)/ (\u0387.\u0387) (\u02da\u0394\u02da)b (\u0387_\u0387) (^_^)b (>_<) (o^^)o (;-;) (\u2265o\u2264) \\(o_o)/ (^-^*) (=\'X\'=)'.split(' ');
 
     return Kaomojis[Math.floor(Math.random() * Kaomojis.length)]
   }
 
-  static http (url) {
+  static http(url) {
     const core = {
       ajax: function (method, url, args, header) {
         return new Promise(function (resolve, reject) {
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.newKaomoji()
     },
     methods: {
-      newKaomoji () {
+      newKaomoji() {
         this.kaomoji = coreFunctions.getKaomoji()
       }
     }

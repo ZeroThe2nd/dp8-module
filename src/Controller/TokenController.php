@@ -7,32 +7,29 @@ use pepijnzegveld\Dp8TestServices\TokenService;
  *
  * @package Drupal\poc\Controller
  */
-class TokenController
-{
+class TokenController {
 
-    private $tokenService;
+  private $tokenService;
 
-    public function __construct()
-    {
-        $this->tokenService = new TokenService;
+  public function __construct() {
+    $this->tokenService = new TokenService;
+  }
+
+  public function generate($length = 64) {
+    $config = \Drupal::config('poc.settings');
+    $charset = $config->get('poc.TokenAlphabet');
+    if (!is_null($charset)) {
+      $this->tokenService->setTokenChars((string) $charset);
     }
 
-    public function generate($length = 64)
-    {
-        $config  = \Drupal::config('poc.settings');
-        $charset = $config->get('poc.TokenAlphabet');
-        if (!is_null($charset)) {
-            $this->tokenService->setTokenChars((string)$charset);
-        }
-
-        return [
-            '#token'    => $this->tokenService->generateToken($length),
-            '#theme'    => 'token',
-            '#attached' => [
-                'library' => [
-                    'poc/css',
-                ],
-            ],
-        ];
-    }
+    return [
+      '#token' => $this->tokenService->generateToken($length),
+      '#theme' => 'token',
+      '#attached' => [
+        'library' => [
+          'poc/css',
+        ],
+      ],
+    ];
+  }
 }

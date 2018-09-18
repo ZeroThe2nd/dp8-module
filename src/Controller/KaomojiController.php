@@ -3,27 +3,27 @@
 // Access URL data
 use pepijnzegveld\Dp8TestServices\KaomojiService;
 
-class KaomojiController
-{
-    /** @var KaomojiService */
-    private $kaomojiService;
+class KaomojiController {
 
-    /**
-     * KaomojiController constructor.
-     */
-    public function __construct()
-    {
-        $this->kaomojiService = new KaomojiService;
-    }
+  /** @var KaomojiService */
+  private $kaomojiService;
 
-    /**
-     * API entry for the Vue KaomojiApp
-     *
-     * @return string
-     * @throws \Exception
-     */
-    public function kaomojiString()
-    {
-        return $this->kaomojiService->getKaomoji();
-    }
+  /**
+   * KaomojiController constructor.
+   */
+  public function __construct() {
+    $this->kaomojiService = new KaomojiService;
+  }
+
+  /**
+   * API entry for the Vue KaomojiApp
+   *
+   * @return string
+   * @throws \Exception
+   */
+  public function kaomojiString() {
+    return json_encode([
+
+    ]);
+  }
 }
