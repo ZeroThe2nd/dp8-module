@@ -79,8 +79,11 @@
   width: 100%;
   justify-content: flex-end;
 }
+.card > .actions:last-child {
+  padding-bottom: 8px
+}
 .card > .actions > .material-button {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 /* COLOR BINDS */
 .color-red {
@@ -151,6 +154,7 @@
 }
 .material-button.small {
   min-width: 36px;
+  line-height: 28px;
 }
 .material-button.round {
   overflow: hidden;
