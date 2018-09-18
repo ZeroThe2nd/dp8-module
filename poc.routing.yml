@@ -2,6 +2,14 @@ poc.token:
   path: 'token/{length}'
   defaults:
     _controller: '\Drupal\poc\Controller\TokenController::generate'
+    _title: 'Generate a token with custom length'
+  requirements:
+    _permission: 'generate token'
+
+poc.token:
+  path: 'token'
+  defaults:
+    _controller: '\Drupal\poc\Controller\TokenController::generate'
     _title: 'Generate a token'
   requirements:
     _permission: 'generate token'
@@ -18,7 +26,7 @@ poc.kaomojiApi:
 poc.config:
   path: '/admin/config/poc'
   defaults:
-    _form: 'Drupal\poc\Form\TokenConfigForm'
+    _form: 'Drupal\poc\Form\PocConfigForm'
     _title: 'Lorem ipsum settings'
   requirements:
     _permission: 'administer site configuration'
