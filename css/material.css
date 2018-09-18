@@ -153,8 +153,12 @@
   letter-spacing: 0
 }
 .material-button.small {
+  font-size: 0.95em;
   min-width: 36px;
   line-height: 28px;
+}
+.material-button.small > * {
+  font-size: 12px;
 }
 .material-button.round {
   overflow: hidden;
