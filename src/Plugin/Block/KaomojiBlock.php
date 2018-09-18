@@ -4,6 +4,7 @@ namespace Drupal\poc\Plugin\Block;
 
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Cache\Cache;
 use Drupal\Core\Session\AccountInterface;
 use pepijnzegveld\Dp8TestServices\KaomojiService;
 
@@ -23,6 +24,11 @@ class KaomojiBlock extends BlockBase {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
 
     $this->kaomojiService = new KaomojiService;
+  }
+
+  public function getCacheTags()
+  {
+    return Cache::mergeTags(parent::getCacheTags(), ['kaomoji_block']);
   }
 
   /**

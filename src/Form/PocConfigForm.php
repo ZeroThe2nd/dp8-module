@@ -61,6 +61,11 @@ class PocConfigForm extends ConfigFormBase {
     $config->set('poc.TokenLength', $form_state->getValue('token_length'));
     $config->set('poc.UseKaomojiApp', $form_state->getValue('kaomoji_use_app'));
     $config->save();
+
+    // Drop cache for the KaomojiBlock render array
+    \Drupal::service('cache_tags.invalidator')
+      ->invalidateTags(['kaomoji_block']);
+
     parent::submitForm($form, $form_state);
 
     return;
