@@ -2,7 +2,7 @@
 
 class coreFunctions {
   static getKaomoji () {
-    const Kaomojis = '\\(^\u0414^)/ (\u0387.\u0387) (\u02da\u0394\u02da)b (\u0387_\u0387) (^_^)b (>_<) (o^^)o (;-;) (\u2265o\u2264) \\(o_o)/ (^-^*) (=\'X\'=)'.split(' ')
+    const Kaomojis = '\\(^\u0414^)/ (\u0387.\u0387) (\u02da\u0394\u02da)b (\u0387_\u0387) (^_^)b (>_<) (o^^)o (;-;) (\u2265o\u2264) \\(o_o)/ (^-^*) (=\'X\'=)'.split(' ');
 
     return Kaomojis[Math.floor(Math.random() * Kaomojis.length)]
   }
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     el: '#kaomojiApp',
     template: '<div class="card">'
       + '<div class="body">'
-      + '<div class="kaomoji text-display-3">{{ kaomoji }}</div> '
+      + '<div class="kaomoji" id="kaomoji">{{ kaomoji }}</div> '
       + '</div></div>',
     data: () => ({
       kaomoji: ''

@@ -3,8 +3,9 @@ kaomoji-app:
   js:
     js/App.js:
       minified: false
+      preprocess: false
   dependencies:
-    - poc/vue
+  - poc/vue
 
 css:
   version: 0.2.0
@@ -23,3 +24,4 @@ vue:
     https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js:
       type: external
       minified: false
+      preprocess: false
