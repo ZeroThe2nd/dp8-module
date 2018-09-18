@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 class coreFunctions {
   static getKaomoji() {
@@ -12,7 +12,7 @@ class coreFunctions {
       ajax: function (method, url, args, header) {
         return new Promise(function (resolve, reject) {
           const client = new XMLHttpRequest();
-          let uri = url
+          let uri = url;
           if (args && (method === 'POST' || method === 'PUT' || method === 'GET')) {
             uri += '?';
             let argCount = 0;
@@ -73,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     template: '<div class="card" @click="newKaomoji">'
       + '<div class="body">'
       + '<div class="kaomoji" id="kaomoji">{{ kaomoji }}</div>'
+      + '<p><small>Click for a new Kaomoji</small></p>'
       + '</div></div>',
     data: () => ({
       kaomoji: 'LOADING'
@@ -86,8 +87,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // this.kaomoji = coreFunctions.getKaomoji();
         const self = this;
         coreFunctions.http('/kaomoji').get().then((data) => {
+          try {
+            data = JSON.parse(data)
+          }
+          catch (e) {
+            console.error("Could not parse JSON", e)
+          }
           self.kaomoji = data.kaomoji
-        }).catch((error)=>{
+        }).catch((error) => {
           console.error("Could not get a new Kaomoji", error)
         })
       }
