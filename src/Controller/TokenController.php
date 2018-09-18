@@ -27,7 +27,7 @@ class TokenController {
       '#theme' => 'token',
       '#attached' => [
         'library' => [
-          'poc/css',
+          'poc/style',
         ],
       ],
     ];

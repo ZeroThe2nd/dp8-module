@@ -6,6 +6,14 @@ poc.token:
   requirements:
     _permission: 'generate token'
 
+poc.kaomojiApi:
+  path: 'kaomoji'
+  defaults:
+    _controller: '\Drupal\poc\Controller\KaomojiController::getKaomoji'
+    _title: 'Get a Kaomoji in JSON format'
+  requirements:
+    _permission: 'view kaomoji'
+
 # configuration form in settings
 poc.config:
   path: '/admin/config/poc'

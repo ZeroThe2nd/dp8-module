@@ -11,11 +11,11 @@ class coreFunctions {
     const core = {
       ajax: function (method, url, args, header) {
         return new Promise(function (resolve, reject) {
-          const client = new XMLHttpRequest()
+          const client = new XMLHttpRequest();
           let uri = url
           if (args && (method === 'POST' || method === 'PUT' || method === 'GET')) {
-            uri += '?'
-            let argCount = 0
+            uri += '?';
+            let argCount = 0;
             for (let key in args) {
               if (args.hasOwnProperty(key)) {
                 if (argCount++) {
@@ -25,7 +25,7 @@ class coreFunctions {
               }
             }
           }
-          client.open(method, uri)
+          client.open(method, uri);
           if (header) {
             for (let key in header) {
               if (header.hasOwnProperty(key)) {
@@ -33,7 +33,7 @@ class coreFunctions {
               }
             }
           }
-          client.send()
+          client.send();
           client.onload = function () {
             if (this.status === 200) {
               resolve(this.response)
@@ -41,13 +41,13 @@ class coreFunctions {
             else {
               reject(this.statusText)
             }
-          }
+          };
           client.onerror = function () {
             reject(this.statusText)
           }
         })
       },
-    }
+    };
 
     // Adapter pattern
     return {
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
       + '<div class="kaomoji" id="kaomoji">{{ kaomoji }}</div> '
       + '</div></div>',
     data: () => ({
-      kaomoji: ''
+      kaomoji: 'LOADING'
     }),
     created: function () {
       this.newKaomoji()
@@ -86,4 +86,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   })
-})
+});

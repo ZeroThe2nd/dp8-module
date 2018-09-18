@@ -21,9 +21,10 @@ class KaomojiController {
    * @return string
    * @throws \Exception
    */
-  public function kaomojiString() {
+  public function getKaomoji() {
+    header("Content-type: Application/json", TRUE, 200);
     return json_encode([
-
+      'kaomoji' => $this->kaomojiService->getKaomoji(),
     ]);
   }
 }

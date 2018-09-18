@@ -7,7 +7,7 @@ kaomoji-app:
   dependencies:
   - poc/vue
 
-css:
+style:
   version: 0.2.0
   css:
     component:

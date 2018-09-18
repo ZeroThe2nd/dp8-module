@@ -36,7 +36,7 @@ class KaomojiBlock extends BlockBase {
       return [
         '#theme' => 'kaomoji-app',
         '#libraries' => [
-          'poc/css',
+          'poc/style',
           'poc/kaomoji-app',
         ],
       ];
@@ -50,7 +50,7 @@ class KaomojiBlock extends BlockBase {
         'max-age' => 0,
       ],
       '#libraries' => [
-        'poc/css',
+        'poc/style',
       ],
     ];
   }
