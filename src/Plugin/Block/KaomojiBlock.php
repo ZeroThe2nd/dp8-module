@@ -15,51 +15,51 @@ use pepijnzegveld\Dp8TestServices\KaomojiService;
  *   admin_label = @Translation("Kaomoji Block"),
  * )
  */
-class KaomojiBlock extends BlockBase
-{
-    private $kaomojiService;
+class KaomojiBlock extends BlockBase {
 
-    public function __construct(array $configuration, $plugin_id, $plugin_definition)
-    {
-        parent::__construct($configuration, $plugin_id, $plugin_definition);
+  private $kaomojiService;
 
-        $this->kaomojiService = new KaomojiService;
+  public function __construct(array $configuration, $plugin_id, $plugin_definition) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
+
+    $this->kaomojiService = new KaomojiService;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function build() {
+    $config = \Drupal::config('poc.settings');
+    $useApp = (bool) $config->get('poc.KaomojiApp');
+
+    if ($useApp) {
+      return [
+        '#theme' => 'kaomoji-app',
+        '#libraries' => [
+          'poc/css',
+          'poc/vue',
+          'poc/kaomoji-app',
+        ],
+      ];
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function build()
-    {
-        $config = \Drupal::config('poc.settings');
-        $useApp = (bool)$config->get('poc.KaomojiApp');
+    // Use the static version
+    return [
+      '#kaomoji' => $this->kaomojiService->getKaomoji(),
+      '#theme' => 'kaomoji',
+      '#cache' => [
+        'max-age' => 0,
+      ],
+      '#libraries' => [
+        'poc/css',
+      ],
+    ];
+  }
 
-        if ($useApp) {
-            return [
-                '#theme'     => 'kaomoji-app',
-                '#libraries' => [
-                    'poc/css',
-                    'poc/vue',
-                    'poc/kaomoji-app',
-                ],
-            ];
-        }
-
-        // Use the static version
-        return [
-            '#kaomoji'   => $this->kaomojiService->getKaomoji(),
-            '#theme'     => 'kaomoji',
-            '#libraries' => [
-                'poc/css',
-            ],
-        ];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function blockAccess(AccountInterface $account)
-    {
-        return AccessResult::allowedIfHasPermission($account, 'view kaomoji');
-    }
+  /**
+   * {@inheritdoc}
+   */
+  protected function blockAccess(AccountInterface $account) {
+    return AccessResult::allowedIfHasPermission($account, 'view kaomoji');
+  }
 }
