@@ -82,7 +82,14 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     methods: {
       newKaomoji() {
-        this.kaomoji = coreFunctions.getKaomoji()
+        // Get from local generated thing
+        // this.kaomoji = coreFunctions.getKaomoji();
+        const self = this;
+        coreFunctions.http('/kaomoji').get().then((data) => {
+          self.kaomoji = data.kaomoji
+        }).catch((error)=>{
+          console.error("Could not get a new Kaomoji", error)
+        })
       }
     }
   })
