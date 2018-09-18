@@ -1,4 +1,4 @@
-poc.token:
+poc.tokenLength:
   path: 'token/{length}'
   defaults:
     _controller: '\Drupal\poc\Controller\TokenController::generate'
