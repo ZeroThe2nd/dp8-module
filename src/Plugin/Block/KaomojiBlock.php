@@ -37,7 +37,11 @@ class KaomojiBlock extends BlockBase {
         '#theme' => 'kaomoji-app',
         '#libraries' => [
           'poc/style',
-          'poc/kaomoji-app',
+        ],
+        '#attached' => [
+          'library' => [
+            'poc/kaomoji-app',
+          ],
         ],
       ];
     }
