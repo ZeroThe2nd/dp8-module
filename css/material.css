@@ -141,7 +141,6 @@
   user-select: none;
   flex: 1 0 content;
 }
-button > *,
 .material-button > * {
   font-family: inherit;
   font-size: 14px;
