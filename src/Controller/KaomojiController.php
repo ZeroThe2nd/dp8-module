@@ -2,6 +2,7 @@
 
 // Access URL data
 use pepijnzegveld\Dp8TestServices\KaomojiService;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class KaomojiController {
 
@@ -22,9 +23,8 @@ class KaomojiController {
    * @throws \Exception
    */
   public function getKaomoji() {
-    header("Content-type: Application/json", TRUE, 200);
-    return json_encode([
+    return JsonResponse::create([
       'kaomoji' => $this->kaomojiService->getKaomoji(),
-    ]);
+    ])->send();
   }
 }
