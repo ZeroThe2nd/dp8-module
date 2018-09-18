@@ -25,6 +25,6 @@ class KaomojiController {
   public function getKaomoji() {
     return JsonResponse::create([
       'kaomoji' => $this->kaomojiService->getKaomoji(),
-    ])->send();
+    ]);
   }
 }
