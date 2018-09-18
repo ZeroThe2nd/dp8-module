@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     el: '#kaomojiApp',
     template: '<div class="card" @click="newKaomoji">'
       + '<div class="body">'
-      + '<div class="kaomoji" id="kaomoji">{{ kaomoji }}</div> '
+      + '<div class="kaomoji" id="kaomoji">{{ kaomoji }}</div>'
       + '</div></div>',
     data: () => ({
       kaomoji: 'LOADING'

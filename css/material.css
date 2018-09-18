@@ -2,7 +2,6 @@
 .card {
   display: inline-block;
   max-width: 675px;
-  min-width: 22vw;
   border-radius: 2px;
   margin: 4px;
   z-index: 1;
