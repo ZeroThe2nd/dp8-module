@@ -26,8 +26,7 @@ class KaomojiBlock extends BlockBase {
     $this->kaomojiService = new KaomojiService;
   }
 
-  public function getCacheTags()
-  {
+  public function getCacheTags() {
     return Cache::mergeTags(parent::getCacheTags(), ['kaomoji_block']);
   }
 

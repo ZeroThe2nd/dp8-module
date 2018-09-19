@@ -27,6 +27,6 @@ poc.config:
   path: '/admin/config/poc'
   defaults:
     _form: 'Drupal\poc\Form\PocConfigForm'
-    _title: 'Lorem ipsum settings'
+    _title: 'Proof-of-Concept module configuration'
   requirements:
     _permission: 'administer site configuration'
