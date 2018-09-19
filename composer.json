@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "dvg/dp8-test-services": "dev-master"
+        "dvg/dp8-test-services": "1.0.0"
     },
     "require-dev": {
         "symfony/translation": "3.4.*",

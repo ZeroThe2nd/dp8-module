@@ -70,7 +70,7 @@ class coreFunctions {
 const bootVueKaomoji = () => {
   const KaomojiApp = new Vue({
     el: '#kaomojiApp',
-    template: '<div class="card dark elevation-0 kaomojiCard">'
+    template: '<div class="card no-margin dark elevation-0 kaomojiCard">'
       + '<div class="title"><span class="text-title">Kaomoji App</span></div>'
       + '<div class="body">'
       + '<div v-if="loaded" class="kaomoji">{{ kaomoji }}</div>'
