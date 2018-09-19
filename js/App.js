@@ -76,7 +76,7 @@ const bootVueKaomoji = () => {
       + '<div v-else class="title">Loading...</div>'
       + '<p class="text-body-2 red" v-if="error.length > 0"></p>'
       + '</div><div class="actions">'
-      + '<button class="md-btn small" @click="newKaomoji">'
+      + '<button class="md-btn small light-blue-700" @click="newKaomoji">'
       + '<span class="text-button">Moar!</span>'
       + '</button></div></div>',
     data: () => ({
