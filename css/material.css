@@ -195,11 +195,11 @@
 }
 /* INPUT */
 /* markup for form elements */
-.material-input {
+.md-input {
   position: relative;
   margin: 0 8px 24px 8px
 }
-.material-input input[type="color"], .material-input input[type="date"], .material-input input[type="datetime"], .material-input input[type="datetime-local"], .material-input input[type="email"], .material-input input[type="month"], .material-input input[type="number"], .material-input input[type="password"], .material-input input[type="search"], .material-input input[type="tel"], .material-input input[type="text"], .material-input input[type="time"], .material-input input[type="url"], .material-input input[type="week"], .material-input textarea {
+.md-input input[type="color"], .md-input input[type="date"], .md-input input[type="datetime"], .md-input input[type="datetime-local"], .md-input input[type="email"], .md-input input[type="month"], .md-input input[type="number"], .md-input input[type="password"], .md-input input[type="search"], .md-input input[type="tel"], .md-input input[type="text"], .md-input input[type="time"], .md-input input[type="url"], .md-input input[type="week"], .md-input textarea {
   background-color: transparent;
   border-color: #d50000;
   border-style: none none solid;
@@ -210,16 +210,16 @@
   padding: 10px;
   width: 100%;
 }
-.material-input input[type="color"]:focus, .material-input input[type="date"]:focus, .material-input input[type="datetime"]:focus, .material-input input[type="datetime-local"]:focus, .material-input input[type="email"]:focus, .material-input input[type="month"]:focus, .material-input input[type="number"]:focus, .material-input input[type="password"]:focus, .material-input input[type="search"]:focus, .material-input input[type="tel"]:focus, .material-input input[type="text"]:focus, .material-input input[type="time"]:focus, .material-input input[type="url"]:focus, .material-input input[type="week"]:focus, .material-input textarea:focus {
+.md-input input[type="color"]:focus, .md-input input[type="date"]:focus, .md-input input[type="datetime"]:focus, .md-input input[type="datetime-local"]:focus, .md-input input[type="email"]:focus, .md-input input[type="month"]:focus, .md-input input[type="number"]:focus, .md-input input[type="password"]:focus, .md-input input[type="search"]:focus, .md-input input[type="tel"]:focus, .md-input input[type="text"]:focus, .md-input input[type="time"]:focus, .md-input input[type="url"]:focus, .md-input input[type="week"]:focus, .md-input textarea:focus {
   outline: 0;
 }
-.material-input input[type="color"]:focus ~ span, .material-input input[type="date"]:focus ~ span, .material-input input[type="datetime"]:focus ~ span, .material-input input[type="datetime-local"]:focus ~ span, .material-input input[type="email"]:focus ~ span, .material-input input[type="month"]:focus ~ span, .material-input input[type="number"]:focus ~ span, .material-input input[type="password"]:focus ~ span, .material-input input[type="search"]:focus ~ span, .material-input input[type="tel"]:focus ~ span, .material-input input[type="text"]:focus ~ span, .material-input input[type="time"]:focus ~ span, .material-input input[type="url"]:focus ~ span, .material-input input[type="week"]:focus ~ span, .material-input textarea:focus ~ span {
+.md-input input[type="color"]:focus ~ span, .md-input input[type="date"]:focus ~ span, .md-input input[type="datetime"]:focus ~ span, .md-input input[type="datetime-local"]:focus ~ span, .md-input input[type="email"]:focus ~ span, .md-input input[type="month"]:focus ~ span, .md-input input[type="number"]:focus ~ span, .md-input input[type="password"]:focus ~ span, .md-input input[type="search"]:focus ~ span, .md-input input[type="tel"]:focus ~ span, .md-input input[type="text"]:focus ~ span, .md-input input[type="time"]:focus ~ span, .md-input input[type="url"]:focus ~ span, .md-input input[type="week"]:focus ~ span, .md-input textarea:focus ~ span {
   -webkit-transition: all 0.075s ease;
   -moz-transition: all 0.075s ease;
   transition: all 0.075s ease;
   width: 100%;
 }
-.material-input input[type="color"]:focus ~ label, .material-input input[type="color"]:valid ~ label, .material-input input[type="date"]:focus ~ label, .material-input input[type="date"]:valid ~ label, .material-input input[type="datetime"]:focus ~ label, .material-input input[type="datetime"]:valid ~ label, .material-input input[type="datetime-local"]:focus ~ label, .material-input input[type="datetime-local"]:valid ~ label, .material-input input[type="email"]:focus ~ label, .material-input input[type="email"]:valid ~ label, .material-input input[type="month"]:focus ~ label, .material-input input[type="month"]:valid ~ label, .material-input input[type="number"]:focus ~ label, .material-input input[type="number"]:valid ~ label, .material-input input[type="password"]:focus ~ label, .material-input input[type="password"]:valid ~ label, .material-input input[type="search"]:focus ~ label, .material-input input[type="search"]:valid ~ label, .material-input input[type="tel"]:focus ~ label, .material-input input[type="tel"]:valid ~ label, .material-input input[type="text"]:focus ~ label, .material-input input[type="text"]:valid ~ label, .material-input input[type="time"]:focus ~ label, .material-input input[type="time"]:valid ~ label, .material-input input[type="url"]:focus ~ label, .material-input input[type="url"]:valid ~ label, .material-input input[type="week"]:focus ~ label, .material-input input[type="week"]:valid ~ label, .material-input textarea:focus ~ label, .material-input textarea:valid ~ label {
+.md-input input[type="color"]:focus ~ label, .md-input input[type="color"]:valid ~ label, .md-input input[type="date"]:focus ~ label, .md-input input[type="date"]:valid ~ label, .md-input input[type="datetime"]:focus ~ label, .md-input input[type="datetime"]:valid ~ label, .md-input input[type="datetime-local"]:focus ~ label, .md-input input[type="datetime-local"]:valid ~ label, .md-input input[type="email"]:focus ~ label, .md-input input[type="email"]:valid ~ label, .md-input input[type="month"]:focus ~ label, .md-input input[type="month"]:valid ~ label, .md-input input[type="number"]:focus ~ label, .md-input input[type="number"]:valid ~ label, .md-input input[type="password"]:focus ~ label, .md-input input[type="password"]:valid ~ label, .md-input input[type="search"]:focus ~ label, .md-input input[type="search"]:valid ~ label, .md-input input[type="tel"]:focus ~ label, .md-input input[type="tel"]:valid ~ label, .md-input input[type="text"]:focus ~ label, .md-input input[type="text"]:valid ~ label, .md-input input[type="time"]:focus ~ label, .md-input input[type="time"]:valid ~ label, .md-input input[type="url"]:focus ~ label, .md-input input[type="url"]:valid ~ label, .md-input input[type="week"]:focus ~ label, .md-input input[type="week"]:valid ~ label, .md-input textarea:focus ~ label, .md-input textarea:valid ~ label {
   -webkit-transition: all 0.125s ease;
   -moz-transition: all 0.125s ease;
   transition: all 0.125s ease;
@@ -227,10 +227,10 @@
   font-size: .75em;
   top: -20px;
 }
-.material-input input[type="color"]:invalid, .material-input input[type="date"]:invalid, .material-input input[type="datetime"]:invalid, .material-input input[type="datetime-local"]:invalid, .material-input input[type="email"]:invalid, .material-input input[type="month"]:invalid, .material-input input[type="number"]:invalid, .material-input input[type="password"]:invalid, .material-input input[type="search"]:invalid, .material-input input[type="tel"]:invalid, .material-input input[type="text"]:invalid, .material-input input[type="time"]:invalid, .material-input input[type="url"]:invalid, .material-input input[type="week"]:invalid, .material-input textarea:invalid {
+.md-input input[type="color"]:invalid, .md-input input[type="date"]:invalid, .md-input input[type="datetime"]:invalid, .md-input input[type="datetime-local"]:invalid, .md-input input[type="email"]:invalid, .md-input input[type="month"]:invalid, .md-input input[type="number"]:invalid, .md-input input[type="password"]:invalid, .md-input input[type="search"]:invalid, .md-input input[type="tel"]:invalid, .md-input input[type="text"]:invalid, .md-input input[type="time"]:invalid, .md-input input[type="url"]:invalid, .md-input input[type="week"]:invalid, .md-input textarea:invalid {
   box-shadow: none;
 }
-.material-input input[type="color"] ~ span, .material-input input[type="date"] ~ span, .material-input input[type="datetime"] ~ span, .material-input input[type="datetime-local"] ~ span, .material-input input[type="email"] ~ span, .material-input input[type="month"] ~ span, .material-input input[type="number"] ~ span, .material-input input[type="password"] ~ span, .material-input input[type="search"] ~ span, .material-input input[type="tel"] ~ span, .material-input input[type="text"] ~ span, .material-input input[type="time"] ~ span, .material-input input[type="url"] ~ span, .material-input input[type="week"] ~ span, .material-input textarea ~ span {
+.md-input input[type="color"] ~ span, .md-input input[type="date"] ~ span, .md-input input[type="datetime"] ~ span, .md-input input[type="datetime-local"] ~ span, .md-input input[type="email"] ~ span, .md-input input[type="month"] ~ span, .md-input input[type="number"] ~ span, .md-input input[type="password"] ~ span, .md-input input[type="search"] ~ span, .md-input input[type="tel"] ~ span, .md-input input[type="text"] ~ span, .md-input input[type="time"] ~ span, .md-input input[type="url"] ~ span, .md-input input[type="week"] ~ span, .md-input textarea ~ span {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -242,7 +242,7 @@
   background: #d50000;
   display: block;
 }
-.material-input label {
+.md-input label {
   position: absolute;
   top: 0;
   left: 0;
