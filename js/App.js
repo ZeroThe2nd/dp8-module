@@ -67,39 +67,46 @@ class coreFunctions {
   };
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+const bootVueKaomoji = () => {
   const KaomojiApp = new Vue({
     el: '#kaomojiApp',
-    template: '<div class="card kaomojiCard">'
+    template: '<div class="card elevation-0 purple-900 kaomojiCard">'
       + '<div class="body">'
-        + '<div class="kaomoji">{{ kaomoji }}</div>'
+      + '<div class="kaomoji" :class="{kaomoji:loaded}">{{ kaomoji }}</div>'
+      + '<p class="text-body-2 red" v-if="error.length > 0"></p>'
       + '</div><div class="actions">'
-        + '<button class="material-button small" @click="newKaomoji">'
-          + '<span class="text-button">New Kaomoji</span>'
+      + '<button class="btn small" @click="newKaomoji">'
+      + '<span class="text-button">Moar!</span>'
       + '</button></div></div>',
     data: () => ({
-      kaomoji: 'LOADING'
+      kaomoji: 'Loading...',
+      loaded: false,
+      error: ''
     }),
     created() {
       this.newKaomoji()
     },
     methods: {
       newKaomoji() {
-        // Get from local generated thing
-        // this.kaomoji = coreFunctions.getKaomoji();
         const self = this;
         coreFunctions.http('/kaomoji').get().then((data) => {
           try {
             data = JSON.parse(data)
           }
           catch (e) {
+            self.error = 'Bad data';
             console.error("Could not parse JSON", e)
           }
+          self.loaded = true;
+          self.error = '';
           self.kaomoji = data.kaomoji
         }).catch((error) => {
+          self.error = 'Failed to load data';
           console.error("Could not get a new Kaomoji", error)
         })
       }
     }
-  })
-});
+  });
+};
+
+window.addEventListener('load', bootVueKaomoji);

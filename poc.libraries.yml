@@ -1,4 +1,5 @@
 kaomoji-app:
+  weight: -10
   version: 0.1.0
   js:
     js/App.js:
@@ -6,6 +7,7 @@ kaomoji-app:
       preprocess: false
   dependencies:
   - poc/vue
+  - poc/style
 
 style:
   version: 0.2.0
@@ -19,9 +21,14 @@ style:
         minified: false
 
 vue:
+  weight: -400
+  remote: https://raw.githubusercontent.com/vuejs/vue/v2.5.17/dist/vue.min.js
   version: 2.5.17
+  license:
+    name: MIT
+    url: https://raw.githubusercontent.com/vuejs/vue/dev/LICENSE
+    gpl-compatible: true
   js:
     https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js:
-      type: external
-      minified: false
-      preprocess: false
+      type: external,
+      minified: true

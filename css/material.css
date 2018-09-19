@@ -82,51 +82,63 @@
 .card > .actions:last-child {
   padding-bottom: 8px
 }
-.card > .actions > .material-button {
+.card > .actions > .btn {
   margin-bottom: 8px;
 }
 /* COLOR BINDS */
-.color-red {
+.red {
   background: rgba(183, 28, 28, 0.9) !important;
 }
-.color-green {
+.green-700 {
   background: rgba(56, 142, 60, 0.9) !important;
   color: #fff
 }
-.color-green-rad {
+.green-rad {
   background: radial-gradient(rgba(34, 41, 34, 1), rgba(0, 5, 0, 1)) !important;
 }
-.color-blue {
+.light-blue-700 {
   background: rgba(2, 136, 209, 0.9) !important;
 }
-.color-purple {
+.purple-900 {
+  color: #fff;
   background: rgba(74, 20, 140, 0.9) !important;
 }
-.color-orange {
+.deep-purple-500 {
+  color: #fff;
+  background: rgba(103, 58, 183, 0.9) !important;
+}
+.deep-purple-900 {
+  color: #fff;
+  background: rgba(49, 27, 146, 0.9) !important;
+}
+.orange-800 {
   background: rgba(239, 108, 0, 0.9) !important;
 }
 /* shadow levels config */
-.zlevel-2, .card, .card-textblock, .material-button.raised {
+.elevation-0 {
+  box-shadow: none;
+}
+.elevation-2, .btn.raised {
   /* this is set as default for all cards */
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
-.zlevel-3 {
+.elevation-3 {
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
-.zlevel-4, #fab {
+.elevation-4 {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
-.zlevel-6 {
+.elevation-6 {
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
 }
-.zlevel-8, .card-raised, .material-button:active {
+.elevation-8, .btn:active {
   box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
 }
-.zlevel-16 {
+.elevation-16 {
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
 /* BUTTON */
-.material-button {
+.btn {
   background: unset;
   color: inherit;
   display: inline-block;
@@ -144,7 +156,7 @@
   user-select: none;
   flex: 1 0 content;
 }
-.material-button > * {
+.btn > * {
   font-family: inherit;
   font-size: 14px;
   font-weight: 600;
@@ -152,15 +164,15 @@
   line-height: 1;
   letter-spacing: 0
 }
-.material-button.small {
+.btn.small {
   font-size: 0.95em;
   min-width: 36px;
   line-height: 28px;
 }
-.material-button.small > * {
+.btn.small > * {
   font-size: 12px;
 }
-.material-button.round {
+.btn.round {
   overflow: hidden;
   height: 56px;
   width: 56px;
@@ -170,13 +182,13 @@
   cursor: pointer;
   cursor: hand
 }
-.material-button.round .material-icons {
+.btn.round .material-icons {
   display: inline-block;
   width: 24px;
   height: 24px;
   margin: 12px 16px
 }
-.material-button .text-button {
+.btn .text-button {
   display: block;
   vertical-align: middle;
   height: 36px;
@@ -264,7 +276,7 @@
   cursor: pointer;
   cursor: hand;
 }
-/* SCROLLBARd */
+/* SCROLLBAR */
 ::-webkit-scrollbar-track {
   background-color: unset
 }
