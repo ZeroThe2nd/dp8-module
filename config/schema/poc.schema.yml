@@ -5,17 +5,12 @@ poc.settings:
     poc:
       type: mapping
       mapping:
+        tokenLength:
+          type: integer
+          label: 'Decides how long the generated token should be by default.'
         tokenAlphabet:
           type: text
           label: 'String of which the Token Generator can choose characters from.'
         KaomojiApp:
           type: boolean
           label: 'Use the VueJS app instead of a static block.'
-
-block.settings.poc_block:
-  type: block_settings
-  label: 'Lorem ipsum block'
-  mapping:
-    poc_block_settings:
-      type: text
-      label: 'Lorem ipsum block settings'
