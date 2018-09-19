@@ -82,9 +82,6 @@
 .card > .actions:last-child {
   padding-bottom: 8px
 }
-.card > .actions > .md-btn {
-  margin-bottom: 8px;
-}
 /* COLOR BINDS */
 .red {
   background: rgba(183, 28, 28, 0.9) !important;
