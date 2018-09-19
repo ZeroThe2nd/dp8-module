@@ -75,7 +75,7 @@ const bootVueKaomoji = () => {
       + '<div class="kaomoji" :class="{kaomoji:loaded}">{{ kaomoji }}</div>'
       + '<p class="text-body-2 red" v-if="error.length > 0"></p>'
       + '</div><div class="actions">'
-      + '<button class="btn small" @click="newKaomoji">'
+      + '<button class="md-btn small" @click="newKaomoji">'
       + '<span class="text-button">Moar!</span>'
       + '</button></div></div>',
     data: () => ({
