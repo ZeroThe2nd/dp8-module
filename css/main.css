@@ -1,7 +1,14 @@
-.poc {
+.poc.token-view,
+.poc.kaomoji-view,
+.poc.kaomoji-block {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   box-sizing: border-box;
+}
+.poc.token-view,
+.poc.kaomoji-view {
+  display: flex;
+  justify-content: center;
 }
 .kaomoji {
   display: block;
@@ -14,8 +21,4 @@
 }
 .kaomojiCard {
   width: 100%;
-}
-.token {
-  display: flex;
-  justify-content: center;
 }
