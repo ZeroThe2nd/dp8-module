@@ -157,9 +157,16 @@
   flex: 1 0 content;
 }
 .md-btn.small {
-  min-width: 42px;
+  min-width: 48px;
   height: 28px;
   line-height: 28px;
+}
+.md-btn.small .text-button {
+  display: block;
+  vertical-align: middle;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
 }
 .md-btn.round {
   overflow: hidden;
