@@ -72,14 +72,15 @@ const bootVueKaomoji = () => {
     el: '#kaomojiApp',
     template: '<div class="card elevation-0 purple-900 kaomojiCard">'
       + '<div class="body">'
-      + '<div class="kaomoji" :class="{kaomoji:loaded}">{{ kaomoji }}</div>'
+      + '<div v-if="loaded" class="kaomoji">{{ kaomoji }}</div>'
+      + '<div v-else class="title">Loading...</div>'
       + '<p class="text-body-2 red" v-if="error.length > 0"></p>'
       + '</div><div class="actions">'
       + '<button class="md-btn small" @click="newKaomoji">'
       + '<span class="text-button">Moar!</span>'
       + '</button></div></div>',
     data: () => ({
-      kaomoji: 'Loading...',
+      kaomoji: '...',
       loaded: false,
       error: ''
     }),
