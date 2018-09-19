@@ -6,8 +6,7 @@
   z-index: 1;
   flex: 1 0 275px;
   -webkit-flex: 1 0 275px;
-  background: rgb(24, 32, 41);
-  /*background: #303030;*/
+  background: #303030;
   color: #fff;
 }
 .card > .media {
@@ -66,6 +65,9 @@
   color: #f8f8f8
 }
 /* Text color inside the alert cards */
+.card.dark {
+  background: rgb(24, 32, 41);
+}
 .card.alert {
   background-color: #4527a0;
   margin: 0;
