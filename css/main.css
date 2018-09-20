@@ -5,8 +5,12 @@
   line-height: 1.6;
   box-sizing: border-box;
 }
+.poc.token-view pre {
+  white-space: normal;
+}
 .poc.token-view,
 .poc.kaomoji-view {
+  max-width: 100%;
   display: flex;
   justify-content: center;
 }

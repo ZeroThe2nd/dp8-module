@@ -1,6 +1,5 @@
 /* CARDS */
 .card {
-  display: inline-block;
   border-radius: 2px;
   margin: 4px;
   z-index: 1;
